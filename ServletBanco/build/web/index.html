@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function solonumeros(eve) {
+                var numeritos = eve.which || eve.keyCode;
+                if (numeritos >= 48 && numeritos <= 57) {
+                    return true;
+                }
+                else
+                    return false;
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <form method="POST" action="ServletCajero">
+                <input type="text" name="mov" onkeypress="return solonumeros(event)">
+                <br><br><br>
+                <input type="submit" name="Mov" value="Abonar"> &nbsp;&nbsp;&nbsp;
+                <input type="submit" name="Mov" value="Retirar">
+            </form>
+        </div>
+    </body>
+</html>
